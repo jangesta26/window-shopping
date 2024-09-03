@@ -19,13 +19,13 @@ export default function RootLayout({
 
   return (
     
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
           >
           {
             loading ? <Loader/> : children

@@ -10,7 +10,7 @@ const DarkModeSwitch = () => {
   return (
     <>
     <Label className={`${style.theme_switch}`}>
-        <Input 
+        <input 
         type="checkbox" 
         onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         checked={theme === 'dark'}

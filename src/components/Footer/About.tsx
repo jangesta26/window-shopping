@@ -1,5 +1,6 @@
 'use client'
 import { PlusCircleIcon, MinusCircleIcon } from 'lucide-react';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 const About = () => {
@@ -8,12 +9,11 @@ const About = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1024); // Adjust based on your breakpoints
+      setIsDesktop(window.innerWidth >= 1024);
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Call handler right away so state is set correctly
-
+    handleResize();
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -37,13 +37,28 @@ const About = () => {
       {(isDesktop || isOpen) && (
         <ul role="list" className="mt-6 space-y-4">
           <li>
-            <a href="/predictiveanalysis" className="text-md leading-6 text-gray-300 hover:text-gray-50">Predictive Analysis</a>
+            <Link 
+            href="/predictiveanalysis" 
+            className="text-md leading-6 text-gray-300 hover:text-gray-50"
+            >
+              Predictive Analysis
+            </Link>
           </li>
           <li>
-            <a href="/customerexperience" className="text-md leading-6 text-gray-300 hover:text-gray-50">Customer Experience</a>
+            <Link 
+            href="/customerexperience" 
+            className="text-md leading-6 text-gray-300 hover:text-gray-50"
+            >
+              Customer Experience
+            </Link>
           </li>
           <li>
-            <a href="/automation" className="text-md leading-6 text-gray-300 hover:text-gray-50">Automation</a>
+            <Link 
+            href="/automation" 
+            className="text-md leading-6 text-gray-300 hover:text-gray-50"
+            >
+              Automation
+            </Link>
           </li>
         </ul>
       )}

@@ -12,11 +12,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { PhoneCall, Send } from 'lucide-react'
+import { PhoneCall, Send, Smartphone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import GoogleIcon from '@/Icons/GoogleIcon'
 import FacebookIcon from '@/Icons/FacebookIcon'
+import { MobileIcon } from '@radix-ui/react-icons'
 
 const MobileNumberLoginForm = () => {
     const router = useRouter();
@@ -29,18 +30,21 @@ const MobileNumberLoginForm = () => {
         </CardDescription>
         </CardHeader>
         <CardContent className="space-y-2 mt-6">
-        <div className="space-y-1 flex items-center gap-0.5">
-           <Image 
-           src="/images/flag/ph-flag.png" 
-           alt="Philippine Flag"
-           width={20}
-            height={20}
-           />
-           <Label className='text-[12px]'>PH+63</Label> 
-            <Input id="current" type="number" placeholder="Enter your mobile number" />
+        <div className="space-y-1">
+            <Input 
+            id="mobileNumber" 
+            type="number" 
+            placeholder="Enter your mobile number"
+            className="pl-10 pr-4"
+            suffix={
+              <Smartphone
+              className='translate-x-8 translate-y-2 pr-1 border-r-[1px] -ml-6 text-slate-700'
+              />
+            }
+            />
         </div>
         </CardContent>
-        <CardFooter className='flex flex-col space-y-2 mt-0.5 px-4'>
+        <CardFooter className='flex flex-col space-y-2 mt-0.5'>
         <Button 
             type="submit" 
             className="w-full flex items-center justify-center gap-1"

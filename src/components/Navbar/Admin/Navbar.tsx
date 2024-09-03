@@ -1,9 +1,9 @@
 import React from 'react'
-import MobileSidebar from '../Sheet/MobileSidebar'
-import SearchInput from '../Input/SearchInput'
-import ToggleUserMenu from '../Dropdown/ToggleUserMenu'
-import { Label } from '../ui/label'
-import DarkModeSwitch from '../Switch/DarkModeSwitch'
+import MobileSidebar from '../../Sheet/MobileSidebar'
+import SearchInput from '../../Input/SearchInput'
+import ToggleUserMenu from '../../Dropdown/ToggleUserMenu'
+import { Label } from '../../ui/label'
+import DarkModeSwitch from '../../Switch/DarkModeSwitch'
 
 const Navbar = () => {
   return (

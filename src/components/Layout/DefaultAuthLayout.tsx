@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShoppingBag } from 'lucide-react';
 import { Label } from '../ui/label';
-import AuthHeading from '../Navbar/AuthHeading';
+import AuthHeading from '../Navbar/Admin/AuthHeading';
 import Footer from '../Footer';
 
 interface DefaultAuthLayoutProps {

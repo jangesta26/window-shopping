@@ -1,5 +1,6 @@
 'use client'
 import { PlusCircleIcon, MinusCircleIcon } from 'lucide-react';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 const CustomerServices = () => {
@@ -37,13 +38,28 @@ const CustomerServices = () => {
       {(isDesktop || isOpen) && (
         <ul role="list" className="mt-6 space-y-4">
           <li>
-            <a href="/aiplatform" className="text-md leading-6 text-gray-300 hover:text-gray-50">AI Platform</a>
+            <Link 
+            href="/aiplatform"
+            className="text-md leading-6 text-gray-300 hover:text-gray-50"
+            >
+              AI Platform
+            </Link>
           </li>
           <li>
-            <a href="/aialgorithms" className="text-md leading-6 text-gray-300 hover:text-gray-50">AI Algorithms</a>
+            <Link 
+            href="/aialgorithms" 
+            className="text-md leading-6 text-gray-300 hover:text-gray-50"
+            >
+              AI Algorithms
+            </Link>
           </li>
           <li>
-            <a href="/industryapplications" className="text-md leading-6 text-gray-300 hover:text-gray-50">Industry Applications</a>
+            <Link 
+            href="/industryapplications" 
+            className="text-md leading-6 text-gray-300 hover:text-gray-50"
+            >
+              Industry Applications
+            </Link>
           </li>
         </ul>
       )}

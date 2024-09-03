@@ -9,7 +9,7 @@ export interface InputProps
     showPassword?: React.ReactNode;
   }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const PasswordInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ suffix, className, type, showPassword, ...props }, ref) => {
     return (
       <div className="flex">
@@ -29,6 +29,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     )
   }
 )
-Input.displayName = "Input"
+PasswordInput.displayName = "PasswordInput"
 
-export { Input }
+export { PasswordInput }

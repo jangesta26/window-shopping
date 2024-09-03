@@ -5,7 +5,7 @@ const AuthHeading = () => {
   return (
     <div className="relative z-10 h-auto lg:h-[100px] bg-white px-4 sm:px-6 md:px-8 lg:px-20 py-4 lg:py-2 flex flex-col lg:flex-row items-center lg:justify-between shadow-md">
       {/* Logo and Title */}
-      <Link href="#something" className="flex items-center gap-2">
+      <Link href="/" className="flex items-center gap-2">
         <Image
           src="/images/brandlogo/brandlogo.png"
           alt="Brand logo"

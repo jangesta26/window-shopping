@@ -18,9 +18,9 @@ const Copyright = () => {
         </div>
         <div className='mt-10 flex items-center justify-center'>
             <ul className="flex items-center gap-9 mt-4 lg:mt-0">
-                <li><a href="javascript:;" className="text-sm text-gray-500">Terms</a></li>
-                <li><a href="javascript:;" className="text-sm text-gray-500">Privacy</a></li>
-                <li><a href="javascript:;" className="text-sm text-gray-500">Cookies</a></li>
+                <li><Link href="#" className="text-sm text-gray-500">Terms</Link></li>
+                <li><Link href="#" className="text-sm text-gray-500">Privacy</Link></li>
+                <li><Link href="#" className="text-sm text-gray-500">Cookies</Link></li>
             </ul>
         </div>
     </div>

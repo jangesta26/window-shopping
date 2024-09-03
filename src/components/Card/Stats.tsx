@@ -11,7 +11,7 @@ import {
     DollarSign,
     Users,
   } from "lucide-react"
-const Status = () => {
+const Stats = () => {
   return (
     <>
         <Card x-chunk="dashboard-01-chunk-0">
@@ -70,4 +70,4 @@ const Status = () => {
   )
 }
 
-export default Status
+export default Stats

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const PaymentMethods = () => {
@@ -5,10 +6,10 @@ const PaymentMethods = () => {
     <div className="lg:text-left col-span-full md:col-span-1 lg:w-max">
         <div className="flex justify-between items-center mb-7 max-w-sm mx-auto">
             <h4 className="text-lg text-gray-200 hover:text-gray-200 font-medium ">Payment Methods</h4>
-            <a href="javascript:;" className="flex items-center gap-2 text-xs text-indigo-600 font-semibold">Visit All<svg width={13} height={10} viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Link href="#" className="flex items-center gap-2 text-xs text-indigo-600 font-semibold">Visit All<svg width={13} height={10} viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 5L11.6667 5M8.33333 9L11.8619 5.4714C12.0842 5.24918 12.1953 5.13807 12.1953 5C12.1953 4.86193 12.0842 4.75082 11.8619 4.5286L8.33333 1" stroke="#4F46E5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            </a>
+            </Link>
         </div>
         <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto ">
             <div className="block h-14">

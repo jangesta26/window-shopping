@@ -9,7 +9,7 @@ const Sidebar = () => {
     <div className="hidden border-r bg-muted md:block">
       <div className="flex h-full max-h-screen flex-col gap-2">
         <div className="flex h-14 items-center border-0 px-4 lg:h-[60px] lg:px-6">
-          <SidebarHeader title="Acme Inc"/>
+          <SidebarHeader title="Winshopee"/>
           <ToggleNotifications title="Toggle notifications"/>
         </div> 
         <div className="flex-1">

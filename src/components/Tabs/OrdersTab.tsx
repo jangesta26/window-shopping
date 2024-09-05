@@ -11,8 +11,6 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Table } from "@/components/ui/table"
-import OrdersTableHeading from "../Table/Header/OrdersTableHeading"
 
 interface OrdersTabProps {
     children: React.ReactNode;
@@ -24,9 +22,9 @@ const OrdersTab: React.FC<OrdersTabProps> = ({ children }) => {
         <div className="flex items-center">
             <OrderTabsList 
             listItem={[
-                {listName:"Week"},
-                {listName:"Month"},
-                {listName:"Year"}
+                {id:1, listName:"Week"},
+                {id:2, listName:"Month"},
+                {id:3, listName:"Year"}
             ]}
             />
         <div className="ml-auto flex items-center gap-2">

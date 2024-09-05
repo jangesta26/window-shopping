@@ -4,6 +4,7 @@ import { poppins } from "@/lib/font";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Loader from "@/components/Common/Loader";
 import { useEffect, useState } from "react";
+import { AuthProvider } from "@/providers/AuthContext";
 
 
 export default function RootLayout({
@@ -27,9 +28,14 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
           >
-          {
-            loading ? <Loader/> : children
-          }
+          
+            {
+              loading 
+              ? <Loader/> : 
+              <AuthProvider>
+              {children}
+              </AuthProvider>
+            }
         </ThemeProvider>
       </body>
       

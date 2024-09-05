@@ -40,7 +40,7 @@
   height: 50px;
   border-radius: 20%;
   color: black;
-  background-color: hsl(var(--muted));
+  background-color: white;
   transition: all 0.3s ease-in-out;
 }
 .icon_container .icon_content a:hover {

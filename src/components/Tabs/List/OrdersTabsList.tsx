@@ -15,7 +15,7 @@ const OrderTabsList = (
     <TabsList>
       {
         listItem.map((item:any)=>(
-          <TabsTrigger value="week">{item.listName}</TabsTrigger>
+          <TabsTrigger key={item.id} value="week">{item.listName}</TabsTrigger>
         ))
       }
       

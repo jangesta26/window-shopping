@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../Sidebar'
-import Navbar from '../Navbar/Admin/Navbar'
+import Navbar from '../Navbar/Auth/Navbar'
 
 export default function DefaultLayout({
   children,

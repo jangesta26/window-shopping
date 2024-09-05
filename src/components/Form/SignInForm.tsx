@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   Card,
   CardContent,
@@ -26,12 +26,13 @@ import {
   FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+import { useAuth } from '@/providers/AuthContext'
 
 const SignInForm = () => {
-    const router = useRouter();
+    const pathname = usePathname();
+    const { login } = useAuth();
     const [openEye, setOpenEye] = useState(false);
 
   const form = useForm<GetAuthLogin>({
@@ -42,14 +43,29 @@ const SignInForm = () => {
     },
   })
 
+  const slicedPathname = pathname.slice(1);
+  const segments = slicedPathname.split('/');
+  const userRole = segments[0];
+
   const onSubmit = async (formData: GetAuthLogin) => {
       const { username, password } = formData;
-      if (username === 'admin123' && password === 'admin123') {
-          alert('Admin successfully to login!!!')
-          router.push('/dashboard') 
+      if(userRole === 'seller'){
+        if (username === 'admin123' && password === 'admin123') {
+            login(userRole); 
+        } else {
+            alert('Admin failed to login!!!')
+        }
+      } else if(userRole === 'buyer') {
+        if (username === 'client123' && password === 'client123') {
+            alert('You have successfully to login!!!')
+            login(userRole); 
+        } else {
+            alert('Failed to login!!!')
+        }
       } else {
-          alert('Admin failed to login!!!')
+        alert('Invalid credentials!!!')
       }
+
   };
 
   return (

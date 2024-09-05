@@ -10,10 +10,10 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { useRouter } from 'next/navigation'
+import { useAuth } from '@/providers/AuthContext'
 
 const ToggleUserMenu = () => {
-  const router = useRouter();
+  const { logout } = useAuth();
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -29,7 +29,7 @@ const ToggleUserMenu = () => {
         <DropdownMenuItem>Support</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
-        onClick={(e)=> router.push('/signin')}
+        onClick={()=> logout}
         >Logout</DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>

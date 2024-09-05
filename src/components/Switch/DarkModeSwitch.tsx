@@ -6,7 +6,6 @@ import { useTheme } from 'next-themes';
 import { Input } from '../ui/input';
 const DarkModeSwitch = () => {
     const { theme, setTheme } = useTheme();
-    console.log(theme)
   return (
     <>
     <Label className={`${style.theme_switch}`}>

@@ -1,10 +1,11 @@
+import SignUpForm from '@/components/Form/Seller/SignUpForm'
 import React from 'react'
 
 const SignUpPage = () => {
   return (
-    <div>
-      This is SignUpPage.
-    </div>
+    <>
+      <SignUpForm />
+    </>
   )
 }
 

@@ -2,6 +2,7 @@
 import React, { FC, ReactNode, useEffect, useState } from 'react';
 import DefaultAuthLayout from '@/components/Layout/DefaultAuthLayout';
 import Loader from '@/components/Common/Loader'; 
+import { usePathname } from 'next/navigation';
 
 interface AuthLayoutProps {
     children: ReactNode;
@@ -10,6 +11,8 @@ interface AuthLayoutProps {
 const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
   
   const [loading, setLoading] = useState<boolean>(true);
+  const pathname = usePathname();
+
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 500);
@@ -21,6 +24,12 @@ const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
       {loading ? (
         <Loader />
       ) : (
+        pathname === '/seller/signup' 
+        ? 
+        <>
+          {children}
+        </>
+        :
         <DefaultAuthLayout>
           {children}
         </DefaultAuthLayout>

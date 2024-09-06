@@ -140,7 +140,7 @@ const SignInForm = () => {
             />
             <div className='text-end text-sm'>
               <Link 
-              href='#'
+              href={`${userRole === 'seller' ? '/seller':'/buyer'}/forgot-password`}
               className='hover:text-primary/90 hover:underline'
               >
                 fogot a password?
@@ -159,7 +159,7 @@ const SignInForm = () => {
           <Label className='text-muted-foreground'>
             Don't have an account? {" "}
             <Link 
-            href='#'
+            href={`${userRole === 'seller' ? '/seller':'/buyer'}/signup`}
             className='text-black hover:text-primary hover:underline'
             >
               Sign up

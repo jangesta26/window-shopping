@@ -8,12 +8,12 @@ const LoginPage = () => {
   return (
     <AuthLoginLayout>
       <AuthTabList />
-      <TabsContent value="email">
-        <SignInForm />
-      </TabsContent>
-      <TabsContent value="phone">
-        <MobileNumberLoginForm />
-      </TabsContent>
+        <TabsContent value="email">
+          <SignInForm />
+        </TabsContent>
+        <TabsContent value="phone">
+          <MobileNumberLoginForm />
+        </TabsContent>
     </AuthLoginLayout>
   )
 }

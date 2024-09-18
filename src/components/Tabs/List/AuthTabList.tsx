@@ -1,25 +1,25 @@
 'use client'
 import React from 'react'
-import {
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
+import { TabsTrigger } from "@/components/ui/tabs"
+import { Label } from '@/components/ui/label'
 
-import { Mail } from 'lucide-react'
-import { MobileIcon } from '@radix-ui/react-icons'
-
-const AuthTabList = () => {
+const AuthTabList = (
+  {
+    labelName,
+  }:{
+    labelName: any
+  }) => {
   return (
-    <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="email" className='flex gap-1'>
-            <Mail className='h-4'/> 
-            Email
-        </TabsTrigger>
-        <TabsTrigger value="phone" className='flex gap-1'>
-            <MobileIcon/> 
-            Phone
-        </TabsTrigger>
-    </TabsList>
+    <>
+      {
+        labelName.map((item:any)=>(
+          <TabsTrigger key={item.id} value={item.name} className={`flex gap-1 ${item.style}`}>
+              {item.icon} 
+              <Label className=' first-letter:uppercase'>{item.name}</Label>
+          </TabsTrigger>
+        ))
+      }
+    </>
   )
 }
 

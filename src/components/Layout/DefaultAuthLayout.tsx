@@ -67,14 +67,15 @@ const DefaultAuthLayout: React.FC<DefaultAuthLayoutProps> = ({ children }) => {
             <div className='flex h-[580px] items-center justify-center'>
              {children}
             </div>
+            <div className='flex items-center justify-center'>
               <Label className='text-sm font-light'>
-                Login as {" "}
-                <Link href={`${segments[0] === "seller" ? '/buyer':'/seller'}/signin`} className='font-bold hover:text-primary underline'>
+                <Link href={`${segments[0] === "seller" ? '/buyer':'/seller'}/signin`} className='hover:text-primary underline'>
                 {
                   segments[0] === "seller" ? <> Buyer </> : <> Seller Centre </>
                 }
                 </Link>
               </Label>
+            </div>
           </div>
         </div>
       </div>

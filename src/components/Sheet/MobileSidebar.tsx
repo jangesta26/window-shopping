@@ -1,39 +1,47 @@
-import React from 'react'
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import SidebarItem from '../Sidebar/SidebarItem'
-import HamburgerButton from '../Button/HamburgerButton'
-import ToggleNotifications from '../Button/ToggleNotifications'
-import SidebarHeader from '../Sidebar/SidebarHeader'
-import Upgrade from '../Card/Upgrade'
+'use client'
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
+import SidebarItem from '../Sidebar/SidebarItem';
+import Upgrade from '../Card/Upgrade';
+import SidebarHeader from '../Sidebar/SidebarHeader';
+import { useSidebar } from '@/providers/SidebarProvider';
+import { Menu } from 'lucide-react';
 
+const MobileSidebar: React.FC = () => {
+  const { isOpen, openSidebar, closeSidebar } = useSidebar();
 
-const MobileSidebar = () => {
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={openSidebar}>
       <SheetTrigger asChild>
-        <HamburgerButton/>
+        <Button
+          variant="outline"
+          size="icon"
+          className="shrink-0 md:hidden"
+          onClick={openSidebar}
+        >
+          <Menu className="h-5 w-5" />
+          <span className="sr-only">Toggle navigation menu</span>
+        </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="flex flex-col lg:hidden">
-        <div className="flex h-14 items-center border-b px-4 py-2 lg:h-[50px] lg:px-6">
-            <SidebarHeader title="Acme Inc"/>
-            <ToggleNotifications title="Toggle notifications"/>
-        </div> 
+      <SheetContent side="left" className="flex flex-col" onClick={closeSidebar}>
+        <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
         <nav className="grid gap-2 text-lg font-medium">
-          <SidebarItem/>
+          <div className='mb-8'>
+            <SidebarHeader title="Window Shopee" />
+          </div>
+          <SidebarItem />
         </nav>
         <div className="mt-auto">
-          <div className='flex p-1'>
-            <Upgrade 
-              title="Upgrade to Pro"
-              description=" Unlock all features and get unlimited access to our support
-              team."
-              buttonName="Upgrade"
-            />
-          </div>
+          <Upgrade 
+            title="Upgrade to Pro"
+            description="Unlock all features and get unlimited access to our support team."
+            buttonName="Upgrade"
+          />
         </div>
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
 
-export default MobileSidebar
+export default MobileSidebar;

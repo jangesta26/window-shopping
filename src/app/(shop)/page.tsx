@@ -1,12 +1,10 @@
 import React from 'react'
-import Promo from '@/components/Ecommerce/Promos/Promo';
 import Categories from '@/utils/categories';
 import CategoryItem from '@/components/Ecommerce/Products/CategoryItem';
 
 const ClientPage = () => {
+
   return (
-    <>
-    <Promo />
       <div className="bg-white dark:bg-gray-900 -mb-10">
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
               <h2 className="text-center sm:text-center md:text-center xl:text-left text-2xl sm:text-3xl md:text-4xl font-bold text-black dark:text-white mb-6 sm:mb-10">
@@ -28,8 +26,8 @@ const ClientPage = () => {
               }
               </div>
           </div>
+
       </div>
-    </>
   )
 }
 

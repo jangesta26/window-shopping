@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Promo = () => {
+const Feature = () => {
   return (
     <section
       className="overflow-hidden bg-[url(https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2670&auto=format&fit=crop)] bg-cover bg-top bg-no-repeat"
@@ -30,4 +30,4 @@ const Promo = () => {
   );
 }
 
-export default Promo;
+export default Feature;

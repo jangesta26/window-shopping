@@ -12,19 +12,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useAuth } from '@/providers/AuthContext';
 import { Label } from '@/components/ui/label';
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
 import BrandSmall from '@/components/Common/BrandSmall';
 import Link from 'next/link';
+import { Settings } from 'lucide-react';
 
 const HeaderItem = () => {
   const { isAuthenticated, userRole, logout } = useAuth();
 
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto mt-1.5">
       <nav aria-label="Global" className="flex items-center justify-between w-full">
         <div className="flex-1">
           <ul className="hidden md:flex items-center justify-center gap-6 text-sm">
@@ -33,21 +29,22 @@ const HeaderItem = () => {
             <li><a className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="#">Sell on Winshopee</a></li>
             <li><a className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="#">Customer Care</a></li>
             <li><a className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="#">Track My Orders</a></li>
-            {!isAuthenticated ? (
+            {!isAuthenticated ||  userRole !== 'buyer'  ? (
               <div className='flex gap-4'>
               
                 <li><a className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" href="/buyer/signin">Login</a></li>
                 <li><a className="rounded-md bg-primary px-2 py-0.5 text-sm font-medium text-muted shadow dark:hover:bg-primary" href="#">Register</a></li>
               </div>
             ) : (
-              <DropdownMenu>
+             
+                <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <div className='flex items-center gap-2'>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Image src="/images/user/user-01.png" width={34} height={34} alt="Avatar" className="rounded-full" />
+                    <Button variant="outline" size="icon" className="w-[28px] h-[28px] rounded-full">
+                      <Image src="/images/user/user-01.png" width={28} height={28} alt="Avatar" className="rounded-full" />
                     </Button>
                     <Label className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75">
-                      Welcome {userRole && 'User!'}
+                      Welcome {userRole === 'buyer' && 'User!'}
                     </Label>
                   </div>
                 </DropdownMenuTrigger>
@@ -67,7 +64,7 @@ const HeaderItem = () => {
           {/* Mobile Menu */}
           <div className="md:hidden mt-2">
           {
-            !isAuthenticated 
+            !isAuthenticated ||  userRole !== 'buyer'
               ? (
                 <div className=' grid grid-cols-1 -mb-4'>
                   <BrandSmall/>
@@ -80,22 +77,15 @@ const HeaderItem = () => {
 
                 </div>
               ) : (
-              <DropdownMenu>
+              <DropdownMenu >
                 <DropdownMenuTrigger asChild>
                 {
                   isAuthenticated && (
 
-                  <div className='flex items-center gap-2'>
-                    <Button variant="outline" size="icon" className="rounded-full">
-
-                      <Avatar className=''>
-                          <AvatarImage 
-                          src='/images/user/user-01.png'
-                          alt="profile" 
-                          />
-                          <AvatarFallback>CN</AvatarFallback>
-                      </Avatar>
-
+                  <div className='flex items-center justify-between gap-2 px-2 -mb-4'>
+                    <BrandSmall />
+                    <Button variant={null} size="icon">
+                      <Settings className='text-black'/>
                     </Button>
                   </div>
                 )}

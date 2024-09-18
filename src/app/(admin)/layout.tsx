@@ -2,6 +2,7 @@
 import NotFound404 from '@/components/Common/NotFound.tsx/404';
 import DefaultLayout from '@/components/Layout/DefaultLayout'
 import { useAuth } from '@/providers/AuthContext';
+import { SidebarProvider } from '@/providers/SidebarProvider';
 import React,{ FC, ReactNode } from 'react'
 
 interface AdminLayoutProps {
@@ -9,16 +10,18 @@ interface AdminLayoutProps {
 }
 
 const AdminLayout: FC<AdminLayoutProps> = ({children}) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, userRole } = useAuth();
   return (
     <>
     {
-      !isAuthenticated 
+      !isAuthenticated || userRole ==="buyer"
       ? <NotFound404 />
       : 
-      <DefaultLayout>
-        {children}
-      </DefaultLayout>
+      <SidebarProvider>
+        <DefaultLayout>
+          {children}
+        </DefaultLayout>
+      </SidebarProvider>
     }
     </>
   )

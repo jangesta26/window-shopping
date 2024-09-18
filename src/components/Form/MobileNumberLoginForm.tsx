@@ -13,11 +13,9 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { PhoneCall, Send, Smartphone } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import GoogleIcon from '@/Icons/GoogleIcon'
 import FacebookIcon from '@/Icons/FacebookIcon'
-import { MobileIcon } from '@radix-ui/react-icons'
 
 const MobileNumberLoginForm = () => {
     const router = useRouter();

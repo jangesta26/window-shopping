@@ -28,7 +28,7 @@ const CategoryItem = (
     const displayCategoryNameForDisplay = category ? capitalizeWords(category.name) : capitalizeWords(displayCategoryName);
 
   return (
-    <Link key={categoryId} href={`/product-list/${slug}`} className="group">
+    <Link key={categoryId} href={`/product/${slug}`} className="group">
       <div className="w-full overflow-hidden rounded-lg shadow-md border-black bg-slate-50 dark:bg-gray-700/5">
         <img
           alt={categoryAlt}

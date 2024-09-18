@@ -11,13 +11,13 @@ import { Button } from "@/components/ui/button"
 const Upgrade = (props:any) => {
   return (
     <Card x-chunk="dashboard-02-chunk-0">
-        <CardHeader className="p-2 md:p-4">
+        <CardHeader>
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>
             {props.description}
         </CardDescription>
         </CardHeader>
-        <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
+        <CardContent>
         <Button size="sm" className="w-full">
             {props.buttonName}
         </Button>

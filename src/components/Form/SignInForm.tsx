@@ -29,6 +29,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { useAuth } from '@/providers/AuthContext'
+import { showErrorAlert, showSuccessAlert } from '@/utils/alert'
 
 const SignInForm = () => {
     const pathname = usePathname();
@@ -50,17 +51,18 @@ const SignInForm = () => {
   const onSubmit = async (formData: GetAuthLogin) => {
       const { username, password } = formData;
       if(userRole === 'seller'){
-        if (username === 'admin123' && password === 'admin123') {
+        if (username === '' && password === '') {
             login(userRole); 
+            showSuccessAlert('Successfully login!')
         } else {
             alert('Admin failed to login!!!')
         }
       } else if(userRole === 'buyer') {
-        if (username === 'client123' && password === 'client123') {
-            alert('You have successfully to login!!!')
+        if (username === '' && password === '') {
+            showSuccessAlert('Successfully login!')
             login(userRole); 
         } else {
-            alert('Failed to login!!!')
+            showErrorAlert('Failed to login!!!')
         }
       } else {
         alert('Invalid credentials!!!')

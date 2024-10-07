@@ -23,7 +23,7 @@ const ViewPage = () => {
     setSelectedImage(imageSrc);
   };
 
-  const defaultImage = "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg";
+  const defaultImage = "https://readymadeui.com/images/product3.webp";
 
   return (
     <div className='mx-auto w-full mt-8'>

@@ -30,7 +30,7 @@ const ProductItem = (
     }) => {
         console.log(productBadge)
   return (
-    <div className="group relative border shadow rounded-md">
+    <div className="group relative border shadow rounded-md h-full w-full">
         <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t-md bg-gray-50 lg:aspect-none group-hover:opacity-75 lg:h-80">
             <span className="mt-[-12px] absolute top-0 right-0 flex items-center bg-primary rounded-l-full py-2 px-3 text-xl font-semibold text-amber-100">
             50% <small className="text-xs ml-1 text-white">/ Today</small>
@@ -52,9 +52,9 @@ const ProductItem = (
                 </h3>
                 <p className='text-sm text-gray-900'>{productSold} sold</p>
             </div>
-            {productBadge && (
+            {productBadge ? (
                 <BadgeProduct title={productBadge} />
-            )}
+            ): (<div className='mb-5'></div>)}
             <div className="flex items-center">
             <StarRating rating={productStar}/>
             <Label className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">{productStar.toFixed(2)}</Label>

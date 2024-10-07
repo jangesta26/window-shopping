@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsAuthenticated(false);
     setUserRole(null);
     setTheme('light');
-    router.push('/');
+    window.location.href = '/';
   };
 
   return (

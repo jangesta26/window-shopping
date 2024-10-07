@@ -54,7 +54,10 @@ const Header = () => {
           <HeartIcon />
           <span className="absolute left-auto -ml-1 top-0 rounded-full bg-primary px-1 py-0 text-xs text-white">1</span>
         </span>
-        <span className="relative">
+        <span 
+        className="relative"
+        onClick={(e)=> window.location.href='/cart'}
+        >
           <CartIcon />
           <span className="absolute left-auto -ml-1 top-0 rounded-full bg-primary px-1 py-0 text-xs text-white">4</span>
         </span>

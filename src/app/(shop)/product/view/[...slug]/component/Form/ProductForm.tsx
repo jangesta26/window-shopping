@@ -6,6 +6,9 @@ import {
     ToggleGroupItem,
 } from "@/components/ui/toggle-group"
 import { Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
+import { showSuccessAlert } from '@/utils/alert';
 
 
 interface onImageClickProps {
@@ -13,6 +16,7 @@ interface onImageClickProps {
 }
 
 const ProductForm: React.FC<onImageClickProps> = ({onImageClick}) => {
+    const router = useRouter();
     const [quantity, setQuantity] = useState(1);
     const [selectedColor, setSelectedColor] = useState<string | undefined>(undefined);
     const [selectedSize, setSelectedSize] = useState<string | undefined>(undefined);
@@ -127,12 +131,19 @@ return (
             </p>
         </div>
         <div className="flex flex-wrap gap-4 mt-8">
-            <button type="button" className="w-full lg:min-w-[200px] px-4 py-2.5 border border-yellow-300 bg-transparent text-yellow-300 text-sm font-semibold rounded">
+            <Button 
+            onClick={()=>showSuccessAlert('Added to cart')}
+            variant={null} 
+            type="button" 
+            className="w-full lg:min-w-[200px] px-4 py-2.5 border border-yellow-300 bg-transparent text-yellow-300 text-sm font-semibold rounded">
                 Add to cart
-            </button>
-            <button type="button" className="w-full lg:min-w-[200px] px-4 py-3 bg-yellow-300 hover:bg-yellow-400 text-black text-sm font-semibold rounded">
+            </Button>
+            <Button 
+            onClick={()=>router.push('/cart')}
+            type="button" 
+            className="w-full lg:min-w-[200px] px-4 py-3 bg-yellow-300 hover:bg-yellow-400 text-black text-sm font-semibold rounded">
                 Buy now
-            </button>
+            </Button>
         </div>
     </form>
     );

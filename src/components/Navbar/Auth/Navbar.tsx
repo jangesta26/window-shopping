@@ -5,8 +5,6 @@ import SearchInput from '../../Input/SearchInput'
 import ToggleUserMenu from '../../Dropdown/ToggleUserMenu'
 import { Label } from '../../ui/label'
 import DarkModeSwitch from '../../Switch/DarkModeSwitch'
-import { useAuth } from '@/providers/AuthContext'
-import NotFound404 from '@/components/Common/NotFound.tsx/404'
 
 const Navbar = () => {
   // const { logout, isAuthenticated, userRole } = useAuth();

@@ -3,6 +3,10 @@
 First, run the development server:
 
 ```bash
+npm install
+# or
+npm update
+# or
 npm run dev
 # or
 yarn dev

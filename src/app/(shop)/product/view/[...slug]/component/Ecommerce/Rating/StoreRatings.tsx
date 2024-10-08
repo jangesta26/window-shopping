@@ -23,7 +23,7 @@ const StoreRatings = () => {
           </Avatar>
           <div className='flex flex-col gap-2'>
             <div className='flex flex-col'>
-              <h1 className='text-xl font-bold'>Let's Shop</h1>
+              <h1 className='text-xl font-bold'>Let&apos;s Shop</h1>
               <p className='text-sm font-light text-gray-400'>Active 8 minutes ago</p>
             </div>
             <div className='flex flex-wrap gap-2'>

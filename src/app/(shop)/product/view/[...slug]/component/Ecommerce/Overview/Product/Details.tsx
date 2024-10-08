@@ -13,6 +13,7 @@ import { CircleHelp } from 'lucide-react'
 import Location from '../../../Dropdown/Location'
 import Delivery from '@/Icons/Delivery'
 import Delivery2 from '@/Icons/Delivery2'
+import { flag } from '@/utils/countryFlag'
 
 
 const Details = () => {
@@ -90,7 +91,7 @@ const Details = () => {
                 </div>
               </div>
               <div className='flex flex-col items-start gap-2 '> 
-                  <Location/>
+                  <Location country={flag}/>
                   <p className='text-white font-light text-[12px]'>₱{20} - ₱{90}</p>
               </div>   
           </div>  

@@ -30,12 +30,10 @@ const ProductListPage = ({ params }: { params: { category: string } }) => {
             {filteredProducts.map(product => (
               <Link key={product.id} href={`/product/view/${params.category}/${product.id}`}>
                 <ProductItem 
-                  productId={product.id}
                   productImageAlt={product.imageAlt}
                   productImageSrc={product.imageSrc}
                   productHref={product.href}
                   productName={product.title}
-                  productColor={product.color}
                   productPrice={product.price}
                   productSold={product.sold}
                   productStar={product.star}

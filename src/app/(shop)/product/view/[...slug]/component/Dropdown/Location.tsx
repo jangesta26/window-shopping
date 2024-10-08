@@ -1,8 +1,9 @@
 'use client'
 import { MapPinned } from 'lucide-react';
+import Image from 'next/image';
 import React, { useState } from 'react'
 
-const Location = () => {
+const Location = ({country}:{country:any}) => {
     const [show, setShow] = useState(false);
     const handleShow = () => {
         setShow(prevShow => !prevShow)
@@ -22,33 +23,23 @@ const Location = () => {
                 <li className="mb-2">
                 <input placeholder="Search..." className="px-4 py-2.5 w-full rounded text-[#333] text-sm border-none outline-blue-600 bg-blue-50 focus:bg-transparent" />
                 </li>
-                <li className="py-2.5 px-4 hover:bg-blue-50 rounded text-black text-sm cursor-pointer">
+            { country.map((item:any)=>(
+                <li key={item.id} className="py-2.5 px-4 hover:bg-blue-50 rounded text-black text-sm cursor-pointer">
                 <div className="flex items-center">
-                    <img src="https://readymadeui.com/usa_flag.webp" className="w-6 mr-3" />
-                    USA
+                    <Image 
+                    src={item.imgSrc}
+                    className="w-6 mr-3"
+                    alt={item.imgAlt}
+                    width={300}
+                    height={300}
+                    />
+                    {item.title}
                 </div>
                 </li>
-                <li className="py-2.5 px-4 hover:bg-blue-50 rounded text-black text-sm cursor-pointer">
-                <div className="flex items-center">
-                    <img src="https://readymadeui.com/uk_flag.webp" className="w-6 mr-3" />
-                    England
-                </div>
-                </li>
-                <li className="py-2.5 px-4 hover:bg-blue-50 rounded text-black text-sm cursor-pointer">
-                <div className="flex items-center">
-                    <img src="https://readymadeui.com/india_flag.webp" className="w-6 mr-3" />
-                    India
-                </div>
-                </li>
-                <li className="py-2.5 px-4 hover:bg-blue-50 rounded text-black text-sm cursor-pointer">
-                <div className="flex items-center">
-                    <img src="https://readymadeui.com/singapore_flag.webp" className="w-6 mr-3" />
-                    Singapore
-                </div>
-                </li>
+            ))}
+
             </ul>
             )
-
         }
 
     </div>

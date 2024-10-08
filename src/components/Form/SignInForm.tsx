@@ -159,7 +159,7 @@ const SignInForm = () => {
           </CardFooter>
           <div className='mb-5 grid grid-rows-3 space-y-2 text-center'>
           <Label className='text-muted-foreground'>
-            Don't have an account? {" "}
+            Don&apos;t have an account? {" "}
             <Link 
             href={`${userRole === 'seller' ? '/seller':'/buyer'}/signup`}
             className='text-black hover:text-primary hover:underline'

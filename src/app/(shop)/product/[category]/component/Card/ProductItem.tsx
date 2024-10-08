@@ -1,28 +1,24 @@
 import { Label } from '@/components/ui/label'
 import React from 'react'
 import StarRating from './StarRating'
-import { Badge } from '@/components/ui/badge'
 import BadgeProduct from '../Badge/Badge'
+import Image from 'next/image'
 
 const ProductItem = (
     {
-        productId,
         productImageAlt,
         productImageSrc,
         productHref,
         productName,
-        productColor,
         productPrice,
         productSold,
         productStar,
         productBadge
     }:{
-        productId: number
         productImageAlt: string
         productImageSrc: string
         productHref: string
         productName: string
-        productColor: string
         productPrice: string
         productSold: string
         productStar: number
@@ -36,10 +32,12 @@ const ProductItem = (
             50% <small className="text-xs ml-1 text-white">/ Today</small>
             </span>
             <p className="px-2 text-md font-medium text-gray-900">{productPrice}</p>
-        <img
+        <Image
             alt={productImageAlt}
             src={productImageSrc}
             className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            width={300}
+            height={300}
         />
         </div>
         <div className="mt-2 flex flex-col p-1 px-2">

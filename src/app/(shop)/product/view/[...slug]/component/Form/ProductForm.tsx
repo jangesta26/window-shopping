@@ -9,6 +9,7 @@ import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { showSuccessAlert } from '@/utils/alert';
+import Image from 'next/image';
 
 
 interface onImageClickProps {
@@ -57,7 +58,7 @@ return (
                         aria-label='Toggle color'
                         className='flex items-center justify-between text-[9px] w-20 h-10 border-[1px] border-white hover:border-gray-800 shrink-0'
                         >
-                        <img 
+                        <Image 
                             src={`https://readymadeui.com/images/product${index + 3}.webp`}
                             alt={`Product${index + 3}`} 
                             width={20}

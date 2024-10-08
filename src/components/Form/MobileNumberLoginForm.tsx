@@ -62,7 +62,7 @@ const MobileNumberLoginForm = () => {
         </CardFooter>
         <div className='mb-[2.9rem] grid grid-rows-3 space-y-2 text-center'>
         <Label className='mt-2 text-muted-foreground'>
-          Don't have an account? {" "}
+          Don&apos;t have an account? {" "}
           <Link 
           href='#'
           className='text-black hover:text-primary'

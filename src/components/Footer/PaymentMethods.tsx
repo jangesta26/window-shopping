@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -13,22 +14,57 @@ const PaymentMethods = () => {
         </div>
         <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto ">
             <div className="block h-14">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkYiqOWFjDw1g_01uS4Bue3IQooKknNe-NW49L5mrilSXBDvjLM1ORkTsLvQ1_lBH_cuk&usqp=CAU" alt="Footer tailwind section" className="max-lg:w-full rounded-md h-14" />
+                <Image 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkYiqOWFjDw1g_01uS4Bue3IQooKknNe-NW49L5mrilSXBDvjLM1ORkTsLvQ1_lBH_cuk&usqp=CAU" alt="Footer tailwind section" 
+                className="max-lg:w-full rounded-md h-14" 
+                width={300}
+                height={300}
+                />
             </div>
             <div className="block h-14">
-                <img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_266x142.png" alt="Footer tailwind section" className="max-lg:w-full rounded-md h-14" />
+                <Image 
+                src="https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_266x142.png" 
+                alt="Footer tailwind section" 
+                className="max-lg:w-full rounded-md h-14"
+                width={300}
+                height={300}
+                />
             </div>
             <div className="block h-14 bg-white rounded-md">
-                <img src="https://logos-world.net/wp-content/uploads/2020/09/MasterCard-Logo-1990-1996.png" alt="Footer tailwind section" className="max-lg:w-full py-1 px-2 h-14" />
+                <Image 
+                src="https://logos-world.net/wp-content/uploads/2020/09/MasterCard-Logo-1990-1996.png" 
+                alt="Footer tailwind section" 
+                className="max-lg:w-full py-1 px-2 h-14" 
+                width={300}
+                height={300}
+                />
             </div>
             <div className="block h-14 bg-white rounded-md">
-                <img src="https://1000logos.net/wp-content/uploads/2023/05/GCash-Logo.png" alt="Footer tailwind section" className="max-lg:w-full h-14" />
+                <Image 
+                src="https://1000logos.net/wp-content/uploads/2023/05/GCash-Logo.png" 
+                alt="Footer tailwind section" 
+                className="max-lg:w-full h-14" 
+                width={300}
+                height={300}
+                />
             </div>
             <div className="block h-14 bg-white rounded-md">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/PayMaya_Logo.png/1200px-PayMaya_Logo.png" alt="Footer tailwind section" className="max-lg:w-full py-1 px-1 h-14" />
+                <Image 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/PayMaya_Logo.png/1200px-PayMaya_Logo.png" 
+                alt="Footer tailwind section" 
+                className="max-lg:w-full py-1 px-1 h-14"
+                width={300}
+                height={300}
+                />
             </div>
             <div className="block  h-14 bg-white rounded-md">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Amazon_Pay_logo.svg/1280px-Amazon_Pay_logo.svg.png" alt="Footer tailwind section" className="max-lg:w-full py-4 px-2 h-14" />
+                <Image 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Amazon_Pay_logo.svg/1280px-Amazon_Pay_logo.svg.png" 
+                alt="Footer tailwind section" 
+                className="max-lg:w-full py-4 px-2 h-14"
+                width={300}
+                height={300}
+                />
             </div>
         </div>
     </div>

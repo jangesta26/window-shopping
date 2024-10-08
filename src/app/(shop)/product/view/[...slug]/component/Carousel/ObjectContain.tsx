@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Image from 'next/image';
 
 interface ObjectContainProps {
   onImageClick: (imageSrc: string) => void;
@@ -29,11 +30,13 @@ const ObjectContain: React.FC<ObjectContainProps> = ({ onImageClick }) => {
             <div className="p-1">
               <Card className='bg-gray-800 cursor-pointer'>
                 <CardContent className="flex aspect-square items-center justify-center p-1">
-                  <img
+                  <Image
                     src={`https://readymadeui.com/images/product${index + 3}.webp`}
                     alt={`Product${index + 3}`} 
                     onClick={() => onImageClick(`https://readymadeui.com/images/product${index + 3}.webp`)}
                     className='rounded-sm'
+                    width={300}
+                    height={300}
                   />
                 </CardContent>
               </Card>

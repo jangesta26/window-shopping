@@ -10,6 +10,7 @@ import LinkItem from './LinkItem';
 import Image from 'next/image';
 import { Label } from '@/components/ui/label';
 import Link from 'next/link';
+import { ScanSearch } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,13 +20,13 @@ const Header = () => {
   };
   console.log(isMenuOpen)
   return (
-  <header className="sticky top-0 shadow-md bg-white tracking-wide z-50">
+  <header className="sticky top-0 shadow-md bg-white tracking-wide z-50 px-10">
     <div className="flex flex-wrap justify-center px-10 py-3 relative">
-      <div className="max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50">
+      <div className="max-xl:hidden xl:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50">
         <LinkItem />
       </div>
     </div>
-    <section className="w-full flex items-center flex-wrap justify-center gap-4 space-x-8 py-3 sm:px-10 border-gray-200 border-b min-h-[75px]">
+    <section className=" flex flex-wrap items-center justify-center gap-4 py-2 border-gray-200 border-b min-h-[75px]">
       <Link href='/'>
         <div className='hidden md:flex flex-col items-center'>
           <Image
@@ -39,13 +40,13 @@ const Header = () => {
           <Label className='text-sm font-semibold ml-2 hidden lg:block'>Winshopee</Label>
         </div>
       </Link>
-
-      <div className="hidden lg:flex w-2/5 bg-gray-100 px-4 py-3 rounded">
-        <SearchIcon />
+      
+      <div className="hidden lg:flex lg:w-2/5 xl:w-[50%] bg-gray-100 gap-2 px-4 py-3 rounded">
+        <ScanSearch className='text-slate-500'/>
         <input type="text" placeholder="Search..." className="outline-none bg-transparent w-full text-sm" />
       </div>
 
-      <div className="flex items-center justify-center space-x-8 xl:space-x-4 sm:space-x-8 p-1 ">
+      <div className="flex items-center justify-center space-x-8 xl:space-x-4 px-2">
         <span className="relative">
           <NotificationIcon />
           <span className="absolute left-auto -ml-1 top-0 rounded-full bg-primary px-1 py-0 text-xs text-white">4</span>
@@ -64,15 +65,15 @@ const Header = () => {
         <div className="inline-block cursor-pointer border-gray-300">
           <ToggleUserMenu />
         </div>
-        <div className='flex lg:hidden'>
+        <div className='flex xl:hidden'>
           <button onClick={handleToggleMenu}>
             <MenuIcon />
           </button>
         </div>
       </div>
-      <div className='flex'>
-        <div className="lg:hidden w-full flex bg-gray-100 px-4 py-3 rounded">
-          <SearchIcon />
+      <div className='flex items-center justify-center w-full px-2'>
+        <div className="lg:hidden w-full md:w-3/4 flex items-center bg-gray-100 gap-2 px-4 py-3 rounded">
+          <ScanSearch className='text-slate-500'/>
           <input type="text" placeholder="Search..." className="outline-none bg-transparent w-full text-sm" />
         </div>
       </div>
@@ -83,7 +84,7 @@ const Header = () => {
     className={`fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
    >
       <div
-      className={`transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} h-full lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50`}
+      className={`transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} h-full lg:!block max-xl:before:fixed max-xl:before:bg-black max-xl:before:opacity-40 max-xl:before:inset-0 max-xl:before:z-50`}
       >
         <button onClick={handleToggleMenu} className="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-black" viewBox="0 0 320.591 320.591">

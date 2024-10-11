@@ -22,11 +22,11 @@ const ProductListPage = ({ params }: { params: { category: string } }) => {
   return (
     <div className="bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 uppercase">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 uppercase">
           {displayCategoryNameForDisplay}
         </h2>
         {filteredProducts.length > 0 ? (
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-8 xl:gap-y-10">
             {filteredProducts.map(product => (
               <Link key={product.id} href={`/product/view/${params.category}/${product.id}`}>
                 <ProductItem 
@@ -48,7 +48,7 @@ const ProductListPage = ({ params }: { params: { category: string } }) => {
           </div>
         )}
       </div>
-      
+
       <div className="flex flex-col items-center gap-5">
         <p className="text-small text-default-500">Selected Page: {currentPage}</p>
         <Pagination

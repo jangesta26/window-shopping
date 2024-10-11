@@ -83,6 +83,16 @@ const nextConfig = {
                 hostname: 'encrypted-tbn2.gstatic.com',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'e7.pngegg.com',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'tcc.on.ca',
+                pathname: '/**',
+            },
         ],
     },
 };

@@ -34,7 +34,7 @@ const ToggleUserMenu = () => {
             >
               <div className='flex items-center '>
                 <div>
-                <span className={`${style.tooltip}`}>Hi!, {userRole}</span>
+                <span className={`${style.tooltip}`}>Hi!, buyer</span>
                   <Image
                     src="/images/user/user-01.png"
                     width={36}
@@ -50,9 +50,11 @@ const ToggleUserMenu = () => {
           <DropdownMenuContent align="center">
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className='hover:cursor-pointer'>Purchase</DropdownMenuItem>
-            <DropdownMenuItem className='hover:cursor-pointer'>Settings</DropdownMenuItem>
-            <DropdownMenuItem className='hover:cursor-pointer'>Support</DropdownMenuItem>
+            <DropdownMenuItem className='hover:cursor-pointer'>My Orders</DropdownMenuItem>
+            <DropdownMenuItem className='hover:cursor-pointer'>My Message</DropdownMenuItem>
+            <DropdownMenuItem className='hover:cursor-pointer'>My Coupons</DropdownMenuItem>
+            <DropdownMenuItem className='hover:cursor-pointer'>My Points</DropdownMenuItem>
+            <DropdownMenuItem className='hover:cursor-pointer'>Setting</DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
               onClick={logout}
@@ -69,13 +71,39 @@ const ToggleUserMenu = () => {
               <span className="sr-only">Toggle user menu</span>
           </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="center" className='flex items-center justify-center rounded-full '>
-            <Button 
-            className="w-full px-5 py-2 text-sm rounded-full text-white bg-primary hover:bg-primary/80"
-            onClick={()=> router.push('/buyer/signin')}
+          <DropdownMenuContent align="start">
+            <DropdownMenuLabel>Sign In | Register</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem 
+            className='hover:cursor-pointer'
+            onClick={()=>router.push('/buyer/signin')}
             >
-              Sign In
-            </Button>
+              My Orders
+            </DropdownMenuItem>
+            <DropdownMenuItem 
+            className='hover:cursor-pointer'
+            onClick={()=>router.push('/buyer/signin')}
+            >
+              My Message
+            </DropdownMenuItem>
+            <DropdownMenuItem 
+            className='hover:cursor-pointer'
+            onClick={()=>router.push('/buyer/signin')}
+            >
+              My Coupons
+            </DropdownMenuItem>
+            <DropdownMenuItem 
+            className='hover:cursor-pointer'
+            onClick={()=>router.push('/buyer/signin')}
+            >
+              My Points
+            </DropdownMenuItem>
+            <DropdownMenuItem 
+            className='hover:cursor-pointer'
+            onClick={()=>router.push('/buyer/signin')}
+            >
+              Setting
+            </DropdownMenuItem>
           </DropdownMenuContent>
       </DropdownMenu>
       )

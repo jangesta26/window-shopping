@@ -61,24 +61,6 @@ const LinkItem = () => {
         <li className="max-lg:border-b max-lg:px-3 max-lg:py-3"><a href="#" className="hover:text-primary text-gray-600 font-light text-sm block">Customer Care</a></li>
         <li className="max-lg:border-b max-lg:px-3 max-lg:py-3"><a href="#" className="hover:text-primary text-gray-600 font-light text-sm block">Contact</a></li>
         <li className="max-lg:border-b max-lg:px-3 max-lg:py-3"><a href="#" className="hover:text-primary text-gray-600 font-light text-sm block">More</a></li>
-        <li className="max-lg:border-b max-lg:px-3 max-lg:py-3">
-            <div className='flex gap-2 text-gray-600 font-light text-sm'>
-                <Link 
-                href='/buyer/signin'
-                className='hover:text-primary hover:underline'
-                >Sign In
-                </Link>
-                <Separator
-                className='h-4'
-                orientation="vertical"
-                />
-                <Link 
-                href='/buyer/signup'
-                className='hover:text-primary hover:underline'
-                >Sign Up
-                </Link>
-            </div>
-        </li>
     </ul>
   )
 }

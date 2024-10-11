@@ -17,7 +17,6 @@ const CheckoutPage = () => {
         <ShopVoucher />
       {/* Place Order */}
         <PlaceOrder />
-      
     </div>
   )
 }

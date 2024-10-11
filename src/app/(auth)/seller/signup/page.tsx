@@ -8,9 +8,12 @@ const SignUpPage = () => {
     <div className="relative">
       <div className="h-[240px]">
         <Image
-          src="https://static.vecteezy.com/system/resources/previews/010/813/490/non_2x/the-words-join-us-on-wooden-cube-team-recruitment-register-membership-hiring-human-resources-management-and-business-concept-free-photo.jpg"
+          src="https://media.licdn.com/dms/image/D4D12AQFWijmUhrvfSw/article-cover_image-shrink_720_1280/0/1679654578161?e=2147483647&v=beta&t=CludPn0RaE4KuKHQbSlQgnf5ftvflp7jCKNzxrL8hZw"
           alt="Banner Image"
+          width={1440}
+          height={500}
           className="w-full h-full object-cover"
+          quality={100}
         />
       </div>
       <SignUpForm />

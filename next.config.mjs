@@ -93,6 +93,11 @@ const nextConfig = {
                 hostname: 'tcc.on.ca',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'media.licdn.com',
+                pathname: '/**',
+            },
         ],
     },
 };

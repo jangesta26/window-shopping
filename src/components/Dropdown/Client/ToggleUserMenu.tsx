@@ -12,8 +12,8 @@ import {
 import { useAuth } from '@/providers/AuthContext'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import User from '@/Icons/User'
 import style from './style.module.css'
+import { User } from 'lucide-react'
 
 const ToggleUserMenu = () => {
   const { logout, isAuthenticated, userRole } = useAuth()
@@ -66,8 +66,8 @@ const ToggleUserMenu = () => {
       ) : (
       <DropdownMenu>
         <DropdownMenuTrigger asChild >
-          <Button variant="secondary" size="icon" className="rounded-full h-8 w-8">
-              <User />
+          <Button variant="outline" size="icon" className="rounded-full h-8 w-8">
+              <User className='hover:text-primary h-5'/>
               <span className="sr-only">Toggle user menu</span>
           </Button>
           </DropdownMenuTrigger>
